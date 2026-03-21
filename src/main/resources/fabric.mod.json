@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "netmusic",
+  "version": "${version}",
+  "name": "Net Music Mod",
+  "depends": {
+    "fabricloader": ">=0.18.2",
+    "minecraft": "1.6.4",
+    "manylib": ">=2.3.0"
+  },
+  "description": "A music player mod",
+  "authors": [
+    "IMG",
+    "TartaricAcid",
+    "郝南村",
+    "琥珀酸",
+    "帕金伊",
+    "SQwatermark",
+    "Inf1nlty"
+  ],
+  "contact": {
+    "homepage": "https://github.com/Inf1nlty/NetMusic-BTW",
+    "sources": "https://github.com/Inf1nlty/NetMusic-BTW"
+  },
+  "license": "BSD 3, CC-4.0",
+  "icon": "assets/netmusic/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [],
+    "btw:addon": [
+      "com.github.tartaricacid.netmusic.NetMusicAddon"
+    ],
+    "client": [
+      "com.github.tartaricacid.netmusic.client.NetMusicClient"
+    ],
+    "emi": [
+      "com.github.tartaricacid.netmusic.compat.EmiPluginImpl"
+    ],
+    "modmenu": [
+      "com.github.tartaricacid.netmusic.compat.ModMenuApiImpl"
+    ]
+  },
+  "custom": {
+    "btw:addon_prefix": "NMP"
+  },
+  "mixins": [
+    "netmusic.mixins.json"
+  ],
+  "accessWidener": "netmusic.accesswidener"
+}
